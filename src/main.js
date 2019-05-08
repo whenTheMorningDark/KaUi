@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 //导入库
-import KaUi from "@/packages"
-import "assets/css/theme.scss"
+import KaUi from "@/packages";
+// import "assets/css/theme.scss";
 //注册
 Vue.use(KaUi);
 Vue.config.productionTip = false

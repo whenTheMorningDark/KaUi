@@ -5,7 +5,7 @@
       使用的按钮
     </ka-button>
     <ka-button type="success">
-      编辑
+      编辑1
     </ka-button>
     <ka-button type="info"></ka-button>
     <ka-button type="warning"></ka-button>
@@ -18,7 +18,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App1'
     }
   }
 }

@@ -1,7 +1,13 @@
 import KaButton from "./button"
+import KaForm from "./form"
+import KaFormItem from "./formItem"
+import KaInput from "@/packages/input/index.js"
 
 const components = [
-  KaButton
+  KaButton,
+  KaForm,
+  KaFormItem,
+  KaInput
 ]
 
 const install = function (Vue) {
@@ -11,5 +17,8 @@ const install = function (Vue) {
 }
 export default {
   install,
-  KaButton
+  KaButton,
+  KaForm,
+  KaFormItem,
+  KaInput
 }

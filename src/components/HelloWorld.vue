@@ -24,18 +24,20 @@
       <button @click="handleSubmit">提交</button>
       <button @click="handleReset">重置</button>
     </div>
-
+    <test :list="list" v-if="list.length>0"></test>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
     data () {
       return {
         formValidate: {
           name: '',
-          mail: ''
+          mail: '',
         },
+        list:[],
         ruleValidate: {
           name: [
             { required: false, message: '用户名不能为空', trigger: 'blur' }
@@ -59,7 +61,19 @@ export default {
       },
       handleReset () {
         this.$refs.form.resetFields();
+      },
+      _getData(){
+        axios.get("/api/blog/list").then((res)=>{
+          // console.log(res.data)
+          this.list = res.data.data
+        })
       }
+    },
+    created(){
+      this._getData();
+    },
+    components:{
+      
     }
   }
 </script>

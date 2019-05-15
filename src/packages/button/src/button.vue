@@ -31,7 +31,8 @@ export default {
   },
   methods: {
     handClick () {
-      console.log(1);
+      // console.log(1);
+      this.$emit("click");
     }
   }
 }
